@@ -1,0 +1,73 @@
+Retractcontractscript v1.0 docs
+
+retractcontractscript is table-based so the memory is a table
+
+a retractcontract is a simple cell that stores a single number
+
+retractcontract 0 0 
+this command makes a retractcontract at cell 0, 0
+
+retract 0 0  
+increments the value of 0,0
+
+contract 0 0  
+decrements the value of 0,0
+
+ruler 0 0 
+outputs the value of 0,0
+
+retractcontracttable 5 6 1
+makes a table of retractcontracts with 5 rows, 6 columns and filled with 1
+
+printmemory
+outputs the table, will output this if retractcontracttable 5 6 1:
+
+1 1 1 1 1 1 
+1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1
+
+
+add 0 0 0 1 0 2
+adds the cells 0,0 and 0,1 and writes the output into cell 0,2
+
+sub 0 0 0 1 0 2
+subtracts cell 0,1 from 0,0 and writes the output into cell 0,2
+
+foff 5 
+waits for 5 seconds
+
+print Hello World!
+outputs 'Hello World!'
+*note: you don't need quotation marks to make a string
+
+read 0 0
+reads input from user and writes it into cell 0,0
+
+label mylabel
+makes a label in the programm that can be jumped to
+
+goto mylabel 
+jumps to mylabel
+
+gotoifeq 0 0 5 mylabel
+jumps to mylabel if cell 0,0 is equal to 5
+
+loop ( 10 , myloop )
+print this is a loop!
+endloop myloop
+makes a loop called myloop that prints 'this is a loop!' 10 times 
+
+rcloop ( 0 0 , myloop2 )
+print this is a rcloop!
+endloop myloop2
+makes a rcloop called myloop2 that prints 'this is a rcloop!' 5 times if cell 0,0 equals to 5
+
+# comments written like this
+
+nothing
+gets ignored
+
+end
+ends the programm
